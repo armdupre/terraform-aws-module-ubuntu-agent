@@ -4,6 +4,7 @@ resource "aws_instance" "Instance" {
 	ami = data.aws_ami.Ami.image_id
 	instance_type = local.InstanceType
 	monitoring = local.InstanceMonitoring
+	key_name = local.SshKeyName
 	iam_instance_profile = aws_iam_instance_profile.IamInstanceProfile.id
 	placement_group = local.PlacementGroupId
 	tags = {

@@ -95,6 +95,12 @@ variable "PlacementGroupId" {
 	type = string
 }
 
+variable "SshKeyName" {
+	default = null
+	description = "Id associated with SSH key pair used for authentication"
+	type = string
+}
+
 variable "Tag" {
 	default = "ubuntu"
 	description = "App ID tag of application using the deployment"
