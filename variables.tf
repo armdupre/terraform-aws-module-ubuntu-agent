@@ -132,3 +132,11 @@ variable "Version" {
 	description = "Versioning of the application using the deployment"
 	type = string
 }
+
+variable "init_cli" {
+	default = <<-EOF
+#!/bin/bash -xe
+systemctl status snap.amazon-ssm-agent.amazon-ssm-agent.service
+    EOF
+	type = string
+}
