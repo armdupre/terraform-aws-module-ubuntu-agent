@@ -35,6 +35,14 @@ resource "aws_iam_policy" "IamPolicy" {
 		Statement = [
 			{
 				Action = [
+					"ec2:DescribeNetworkInterfaces",
+					"ec2:DescribeInstances"
+				]
+				Effect = "Allow",
+				Resource = "*"
+			},
+			{
+				Action = [
 					"ssm:UpdateInstanceInformation",
 					"ssmmessages:CreateControlChannel",
 					"ssmmessages:CreateDataChannel",
