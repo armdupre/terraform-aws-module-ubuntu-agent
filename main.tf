@@ -68,3 +68,11 @@ resource "aws_eip" "Eth0ElasticIp" {
 		aws_instance.Instance
 	]
 }
+
+resource "time_sleep" "SleepDelay" {
+	create_duration = local.SleepDelay
+
+	depends_on = [
+		aws_instance.Instance
+	]
+}
