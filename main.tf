@@ -89,7 +89,7 @@ resource "aws_network_interface" "Eth3" {
 	source_dest_check = local.InterfaceSourceDestCheck
 	subnet_id = local.Eth3SubnetId
 	security_groups = [
-		local.Eth2SecurityGroupId
+		local.Eth3SecurityGroupId
 	]
 	private_ips = local.Eth3PrivateIpAddresses
 	tags = {
